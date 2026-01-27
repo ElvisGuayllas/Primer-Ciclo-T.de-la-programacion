@@ -92,5 +92,6 @@ Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), f
 - ## Reflexión crítica ##
 En esta unidad me costo demasiado entender los temas de tipos de array y la modularidad, me hizo algo complejo los temas pero gracias a la Ing y sus tutorias logre reforzar mis conocimientos y quitar dudas.
 - ## Tareas Entregadas ##
-
+- ✅ [APE 1. Construcción de funciones y procedimientos en un lenguaje de programación](https://drive.google.com/file/d/1z92v5GO-P8uBfDW4pjwX6G5OhAi3Tyka/view?usp=drive_link)
+- ✅ [AA 1. Curso Fundamentos de Python 1. Computación UNL](https://drive.google.com/file/d/1MyLiiQJ8KwwSUACr6XMBxE7UdEbG6XKS/view?usp=drive_link)
 [⬅️ Regresar al índice principal](./index.md)
