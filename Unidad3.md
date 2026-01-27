@@ -30,9 +30,10 @@ En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo e
 
 
 **💻 Ejemplo en lenguaje C:**
+
 ![Paso por Valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png?raw=true)
 
-**🔍 ¿Cómo funciona y para qué sirve?**
+**🔍 ¿Cómo funciona?**
 🔢 **1.** `modificarValor(&numero);` -> `&numero` obtiene la dirección de memoria de la variable.
 🔢 **2.** `printf(...)` -> Muestra el valor actual. Como la función ya lo cambió, imprime **15**.
 🔢 **3.** `*n = 15;` -> `n` tiene la dirección; `*n` va a ese punto y cambia el valor allí guardado.
@@ -51,9 +52,10 @@ El emisor entrega la **dirección de memoria** (el puntero o referencia) donde r
 
 
 **💻 Ejemplo en lenguaje C:**
+
 ![Paso por Referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png?raw=true)
 
-**🔍 ¿Cómo funciona y para qué sirve?**
+**🔍 ¿Cómo funciona?**
 🔢 **1.** `intercambiarvalores(&a, &b);` -> Pasa las direcciones de `a` y `b`.
 🔢 **2.** **Algoritmo de intercambio:**
     ```text
@@ -85,7 +87,9 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 * **🚀 Atractivo:** Acceso directo $O(1)$ y recorrido eficiente.
 
 **💻 Ejemplo en C:**
+
 ![Vector](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/UNIDIMENCIONAL.png?raw=true)
+
 *✨ Ideal para almacenar listas de notas o nombres y acceder a ellos por su posición.*
 
 ---
@@ -96,7 +100,9 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 * **🚀 Atractivo:** Mantiene memoria contigua para un acceso rápido a datos tabulares.
 
 **💻 Ejemplo en C:**
+
 ![Matriz](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/BIDIMENCIONAL.png?raw=true)
+
 *✨ Representación perfecta para tablas Excel o coordenadas en un plano.*
 
 ---
@@ -107,7 +113,9 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 * **🚀 Atractivo:** Permite manejar volúmenes de datos con precisión volumétrica.
 
 **💻 Ejemplo en C:**
+
 ![Cubo](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/MULTIDIMENSIONAL.png?raw=true)
+
 *✨ Utilizado para procesar video o píxeles en espacios tridimensionales.*
 
 ---
