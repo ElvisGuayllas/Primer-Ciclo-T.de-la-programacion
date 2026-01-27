@@ -89,4 +89,8 @@ Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), f
 - . 
 ![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/MULTIDIMENSIONAL.png)
 
+- ## Reflexión crítica ##
+En esta unidad me costo demasiado entender los temas de tipos de array y la modularidad, me hizo algo complejo los temas pero gracias a la Ing y sus tutorias logre reforzar mis conocimientos y quitar dudas.
+- ## Tareas Entregadas ##
+
 [⬅️ Regresar al índice principal](./index.md)
