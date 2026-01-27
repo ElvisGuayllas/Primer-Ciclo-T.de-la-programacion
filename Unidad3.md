@@ -40,7 +40,7 @@ Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
 - **.**
 ![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
 - ¿Como funciona y para que sirve el codigo de la imagen?
-Línea 12: intercambiarvalores(&a, &b);
+- Línea 12: intercambiarvalores(&a, &b);
 Pasa direcciones de a (ej: 0x1000) y b (ej: 0x1004)
 Función recibe esas direcciones en x e y
 Líneas 20-22: Algoritmo de intercambio clásico
@@ -67,6 +67,11 @@ El Valor de es b: 3
 Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), funciones reutilizables.
 
  ## ARREGLOS (ARRAYS) ##
+ - Un array (también conocido como arreglo o vector) es una de las estructuras de datos más fundamentales en programación. Técnicamente, es una colección finita, homogénea y contigua de elementos.
+Finita: Debe tener un tamaño definido desde el momento de su creación (se debe reservar una cantidad específica de memoria).
+Homogénea: Todos los elementos del array deben ser del mismo tipo de dato (por ejemplo, todos enteros o todos caracteres). No puedes mezclar tipos.
+Contigua: Los elementos se almacenan en posiciones de memoria físicamente seguidas. Esto permite que el procesador acceda a ellos de forma muy rápida mediante un índice.
+
 
 
 
