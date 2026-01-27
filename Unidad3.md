@@ -28,7 +28,7 @@ En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo e
 
 
 
-**Ejemplo en lenguaje C:**
+- **Ejemplo en lenguaje C:**
 ![Paso por Valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png?raw=true)
 
 **¿Cómo funciona y para qué sirve el código de la imagen?**
@@ -50,7 +50,7 @@ El emisor entrega la **dirección de memoria** (el puntero o referencia) donde r
 
 
 
-**Ejemplo en lenguaje C:**
+- **Ejemplo en lenguaje C:**
 ![Paso por Referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png?raw=true)
 
 **¿Cómo funciona y para qué sirve el código de la imagen?**
@@ -86,20 +86,20 @@ Un **array** (arreglo o vector) es una colección de elementos con tres propieda
 ### 🗂️ **Tipos de Array y Conceptos**
 
 #### **1. Array Unidimensional (Vector) 📏**
-* **Concepto:** Colección lineal de elementos del mismo tipo, organizados en una sola fila en memoria contigua. El acceso es secuencial o directo mediante un único índice: `nombre[índice]`.
-* **Ejemplo en C:**
+* **Concepto:** Es una estructura de datos lineal que almacena una colección finita de elementos del mismo tipo de dato en posiciones consecutivas de memoria. Cada elemento se accede mediante un único índice numérico que inicia en 0. Su simplicidad lo hace ideal para representar listas secuenciales, secuencias numéricas, colas o pilas. La organización lineal permite acceso directo O(1) y traversal eficiente El acceso es secuencial o directo mediante un único índice: `nombre[índice]`.
+- **Ejemplo en C:**
     ![Vector](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/UNIDIMENCIONAL.png?raw=true)
 * **¿Cómo funciona y para qué sirve?:** Permite almacenar listas de datos (como notas o nombres) y acceder a ellos rápidamente mediante su posición.
 
 #### **2. Array Bidimensional (Matriz) 📋**
-* **Concepto:** Estructura rectangular de elementos organizados en **filas y columnas**. Representa una tabla 2D. El acceso requiere dos índices: `nombre[fila][columna]`. El total de elementos es `filas × columnas`.
-* **Ejemplo en C:**
+* **Concepto:** Estructura rectangular que organiza elementos en un sistema de filas y columnas, formando una tabla bidimensional. Cada elemento se identifica por dos índices: fila y columna. Perfecto para representar tablas de datos, mapas 2D, matrices matemáticas, imágenes en escala de grises o tableros de juegos. El total de elementos es filas × columnas, manteniendo memoria contigua para acceso rápido El acceso requiere dos índices: `nombre[fila][columna]`. El total de elementos es `filas × columnas`.
+- **Ejemplo en C:**
     ![Matriz](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/BIDIMENCIONAL.png?raw=true)
 * **¿Cómo funciona y para qué sirve?:** Ideal para representar tablas de datos, mapas de juego o matrices matemáticas.
 
 #### **3. Array Multidimensional (n-dimensional) 🧊**
-* **Concepto:** Extensión a 3 o más dimensiones. Organiza datos en cubos o hiperestructuras. Acceso: `nombre[i1][i2][i3]...[in]`.
-* **Ejemplo en C:**
+* **Concepto:** Generalización a tres o más dimensiones que organiza datos en estructuras volumétricas o hiperdimensionales. Cada elemento requiere n índices para localización precisa. Se usa en gráficos 3D, procesamiento de imágenes médicas (tomografías), simulaciones físicas, bases de datos multidimensionales y análisis de datos complejos. Mantiene la propiedad de almacenamiento contiguo pero con complejidad exponencial en memoria. Acceso: `nombre[i1][i2][i3]...[in]`.
+- **Ejemplo en C:**
     ![Cubo](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/MULTIDIMENSIONAL.png?raw=true)
 * **¿Cómo funciona y para qué sirve?:** Usado para datos volumétricos complejos, como simulaciones físicas o procesamiento de video (píxeles en 3D).
 
