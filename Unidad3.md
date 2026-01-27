@@ -11,9 +11,9 @@ Al segmentar un programa, los módulos deben intercambiar información. La forma
 - **Contexto de uso:** Ideal para tipos de datos primitivos (escalares) como enteros ($int$), booleanos ($bool$) o caracteres ($char$).
 - **Atributo técnico:** Maximiza el aislamiento y reduce el acoplamiento. Es la opción más segura para evitar "efectos secundarios" (cambios accidentales en otras partes del programa).
 - **Ejemplo en lenguaje C**
-- **Ejemplo:**  
+- **.** 
 ![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
-¿Como funciona y para que sirve el codigo de la imagen?
+- ¿Como funciona y para que sirve el codigo de la imagen?
 Línea 8: modificarValor(&numero);
 &numero = obtiene la dirección de memoria donde está guardado numero
 Pasa esa dirección (ej: 0x1000) a la función
@@ -39,7 +39,7 @@ Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
 - **Ejemplo en lenguaje C**
 - **.**
 ![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
-¿Como funciona y para que sirve el codigo de la imagen?
+- ¿Como funciona y para que sirve el codigo de la imagen?
 Línea 12: intercambiarvalores(&a, &b);
 Pasa direcciones de a (ej: 0x1000) y b (ej: 0x1004)
 Función recibe esas direcciones en x e y
