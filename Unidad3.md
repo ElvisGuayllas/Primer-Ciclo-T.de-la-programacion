@@ -121,7 +121,7 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 ---
 
 ## 💭 **Reflexión Crítica**
-En esta unidad me costó demasiado entender los temas de **tipos de array** y la **modularidad**, se me hicieron complejos pero gracias a la Ing. y sus tutorías logré reforzar mis conocimientos y quitar dudas fundamentales.
+Durante esta unidad, el aprendizaje de los tipos de arreglos y la modularidad representó un desafío significativo debido a su complejidad. Sin embargo, gracias al apoyo de la ingeniera y a las tutorías recibidas, logré consolidar mis conocimientos, resolver dudas críticas y fortalecer mi comprensión de estos conceptos fundamentales
 
 ---
 
