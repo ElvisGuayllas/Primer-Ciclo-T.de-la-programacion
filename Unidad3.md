@@ -10,8 +10,10 @@ Al segmentar un programa, los módulos deben intercambiar información. La forma
 - **Mecánica:** El módulo receptor opera sobre la copia. Cualquier modificación interna permanece aislada, por lo que la variable original en el módulo emisor se mantiene inalterada.
 - **Contexto de uso:** Ideal para tipos de datos primitivos (escalares) como enteros ($int$), booleanos ($bool$) o caracteres ($char$).
 - **Atributo técnico:** Maximiza el aislamiento y reduce el acoplamiento. Es la opción más segura para evitar "efectos secundarios" (cambios accidentales en otras partes del programa).
-- Ejemplo en lenguaje C
-- 
+- **Ejemplo en lenguaje C**
+- **Ejemplo:**  
+![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Teor-a-de-la-Programaci-n/blob/main/imagenes/imagen1.png)
+
 - **2. Paso por Referencia (Pass by Reference)**
   En lugar de duplicar el dato, el emisor entrega la dirección de memoria (el puntero o referencia) donde reside la información original.
 **Mecánica:** El módulo receptor no posee una copia; tiene acceso directo al "contenedor" original. Cualquier alteración realizada por el módulo impacta directamente en el dato global.
