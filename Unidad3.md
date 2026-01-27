@@ -1,97 +1,93 @@
-#  **📚 TEMAS PRINCIPALES** 
-MODULARIDAD
-- La modularidad es una estrategia de diseño basada en el principio de "Divide y Vencerás". Ante algoritmos extensos y complejos, la solución óptima es fragmentar el sistema en componentes más pequeños y autónomos denominados módulos. Dependiendo del lenguaje o paradigma, estos se conocen como procesos, funciones, métodos o subrutinas.
-Esta técnica no solo reduce la carga cognitiva para el programador, sino que facilita el mantenimiento, la escalabilidad y la reutilización de código.
-- **Mecanismos de Comunicación entre Módulos**
-Al segmentar un programa, los módulos deben intercambiar información. La forma en que los datos viajan de un punto a otro define la integridad y el rendimiento del sistema.
-- Existen dos métodos fundamentales:
-- **1. Paso por Valor (Pass by Value)**
-  En este modelo, el sistema genera una réplica exacta del dato en un nuevo espacio de memoria asignado al módulo receptor.
-- **Mecánica:** El módulo receptor opera sobre la copia. Cualquier modificación interna permanece aislada, por lo que la variable original en el módulo emisor se mantiene inalterada.
-- **Contexto de uso:** Ideal para tipos de datos primitivos (escalares) como enteros ($int$), booleanos ($bool$) o caracteres ($char$).
-- **Atributo técnico:** Maximiza el aislamiento y reduce el acoplamiento. Es la opción más segura para evitar "efectos secundarios" (cambios accidentales en otras partes del programa).
-- **Ejemplo en lenguaje C**
-- **.** 
-![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
-- ¿Como funciona y para que sirve el codigo de la imagen?
-Línea 8: modificarValor(&numero);
-&numero = obtiene la dirección de memoria donde está guardado numero
-Pasa esa dirección (ej: 0x1000) a la función
-Resultado: La función "conoce dónde vive" numero
-Línea 10: printf("El valor de numero en main es: %d\n", numero);
-Imprime el valor actual de numero en main()
-Como la función ya lo cambió, ahora imprime 15
-Prueba: Sin línea 8, imprimiría 5
-Línea 14: *n = 15; (dentro de función)
-n contiene la dirección 0x1000
-*n = va a esa dirección y cambia el valor que hay ahí
-Efecto: numero en main() pasa de 5 → 15
-**¿Para qué sirve?**
-Modificar variables originales desde funciones
-Intercambiar valores (como tu ejemplo de intercambiarvalores)
-Pasar arreglos grandes sin copiarlos
-Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
-- **2. Paso por Referencia (Pass by Reference)**
-  En lugar de duplicar el dato, el emisor entrega la dirección de memoria (el puntero o referencia) donde reside la información original.
-**Mecánica:** El módulo receptor no posee una copia; tiene acceso directo al "contenedor" original. Cualquier alteración realizada por el módulo impacta directamente en el dato global.
-**Contexto de uso**: Esencial para estructuras de datos masivas, objetos complejos o arreglos (arrays), donde duplicar la información penalizaría el rendimiento del sistema.
-**Atributo técnico:** Optimiza la eficiencia de memoria y velocidad. Sin embargo, aumenta el riesgo de efectos colaterales, por lo que requiere una gestión más cuidadosa de la lógica de programación.
-- **Ejemplo en lenguaje C**
-- **.**
-![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
-- ¿Como funciona y para que sirve el codigo de la imagen?
-- Línea 12: intercambiarvalores(&a, &b);
-Pasa direcciones de a (ej: 0x1000) y b (ej: 0x1004)
-Función recibe esas direcciones en x e y
-Líneas 20-22: Algoritmo de intercambio clásico
-text
-ANTES: a=3(0x1000)  b=5(0x1004)
-1. aux = *x     → aux=3
-2. *x = *y      → a=5  
-3. *y = aux     → b=3
-DESPUÉS: a=5       b=3 ✓
-Líneas 13-14: Imprimen resultado final en main(): a=5, b=3
-Flujo completo
-text
-Inicio: a=3, b=5
-→ Función recibe direcciones
-→ aux guarda 3, a recibe 5, b recibe 3  
-→ main() ve: a=5, b=3 ✓
-Salida:
-text
-El Valor intercambiado de x es: 5
-El Valor intercambiado de y es: 3
-EL Valor de es a: 5
-El Valor de es b: 3
-**¿Para qué sirve?**
-Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), funciones reutilizables.
+# 📚 TEMAS PRINCIPALES
 
- ## ARREGLOS (ARRAYS) ##
- - Un array (también conocido como arreglo o vector) es una de las estructuras de datos más fundamentales en programación. Técnicamente, es una colección finita, homogénea y contigua de elementos.
-1. Finita: Debe tener un tamaño definido desde el momento de su creación (se debe reservar una cantidad específica de memoria).
-2. Homogénea: Todos los elementos del array deben ser del mismo tipo de dato (por ejemplo, todos enteros o todos caracteres). No puedes mezclar tipos.
-3. Contigua: Los elementos se almacenan en posiciones de memoria físicamente seguidas. Esto permite que el procesador acceda a ellos de forma muy rápida mediante un índice.
-- **Tipos de Array**
-- **Array Unidimensional (Vector)**
-- Colección lineal de elementos del mismo tipo, organizados en una sola fila en memoria contigua. Acceso secuencial mediante un único índice: nombre[índice].
-- **Ejemplo en lenguaje C**
-- .
-![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/UNIDIMENCIONAL.png)
-- ¿Como funciona y para que sirve?
-- **Array Bidimensional (Matriz)**
-- Estructura rectangular de elementos organizados en filas y columnas. Representa una tabla 2D. Acceso: nombre[fila][columna]. Total de elementos: filas × columnas.
-- **Ejemplo en lenguaje C**
-- . 
-![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/BIDIMENCIONAL.png)
-- **Array Multidimensional (n-dimensional)**
-- Extensión a 3 o más dimensiones. Organiza datos en cubos o hiperestructuras. Acceso: nombre[i1][i2][i3]...[in]. Usado para datos volumétricos complejos.
-- **Ejemplo en lenguaje C**
-- . 
-![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/MULTIDIMENSIONAL.png)
+## 🧩 MODULARIDAD
 
-- ## Reflexión crítica ##
-En esta unidad me costo demasiado entender los temas de tipos de array y la modularidad, me hizo algo complejo los temas pero gracias a la Ing y sus tutorias logre reforzar mis conocimientos y quitar dudas.
-- ## Tareas Entregadas ##
-- ✅ [APE 1. Construcción de funciones y procedimientos en un lenguaje de programación](https://drive.google.com/file/d/1z92v5GO-P8uBfDW4pjwX6G5OhAi3Tyka/view?usp=drive_link)
-- ✅ [AA 1. Curso Fundamentos de Python 1. Computación UNL](https://drive.google.com/file/d/1MyLiiQJ8KwwSUACr6XMBxE7UdEbG6XKS/view?usp=drive_link)
+La **modularidad** es una estrategia de diseño fundamentada en el principio de **"Divide y Vencerás"**. Ante algoritmos extensos y complejos, la solución óptima consiste en fragmentar el sistema en componentes más pequeños y autónomos denominados **módulos**. 
+
+Dependiendo del lenguaje o paradigma de programación, estos se conocen como:
+* 🛠️ **Procesos**
+* ⚙️ **Funciones**
+* 🏗️ **Métodos**
+* 🔄 **Rutinas / Subrutinas**
+
+> **Beneficio:** Esta técnica reduce la carga cognitiva del programador y facilita enormemente el mantenimiento, la escalabilidad y la reutilización de código.
+
+---
+
+### ⚙️ Mecanismos de Comunicación entre Módulos
+
+Al segmentar un programa, los módulos deben intercambiar información. La forma en que los datos viajan define la **integridad** y el **rendimiento** del sistema.
+
+#### 1. Paso por Valor (*Pass by Value*) 📥
+En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo espacio de memoria asignado al módulo receptor.
+
+* **Mecánica:** El módulo receptor opera sobre la copia. Cualquier modificación permanece aislada; la variable original en el módulo emisor queda intacta.
+* **Contexto de uso:** Ideal para datos **primitivos** como enteros (`int`), booleanos (`bool`) o caracteres (`char`).
+* **Atributo técnico:** Maximiza el **aislamiento** y reduce el **acoplamiento**, evitando efectos secundarios accidentales.
+
+
+
+**Ejemplo en lenguaje C:**
+![Paso por Valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png?raw=true)
+
+---
+
+#### 2. Paso por Referencia (*Pass by Reference*) 📤
+El emisor entrega la **dirección de memoria** (el puntero) donde reside la información original.
+
+* **Mecánica:** El módulo receptor tiene acceso directo al **contenedor original**. Cualquier alteración impacta directamente en el dato global.
+* **Contexto de uso:** Esencial para estructuras masivas, objetos complejos o **arreglos (arrays)**.
+* **Atributo técnico:** Optimiza la **eficiencia de memoria y velocidad**, aunque requiere una gestión cuidadosa para evitar errores colaterales.
+
+
+
+**Ejemplo en lenguaje C:**
+![Paso por Referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png?raw=true)
+
+#### 🔍 Análisis del Código
+* **Línea 8 (`&numero`):** Obtiene la dirección de memoria (ej: `0x1000`). La función ahora "sabe dónde vive" la variable.
+* **Línea 14 (`*n = 15`):** Accede a esa dirección y cambia el valor original de `5` a `15`.
+* **Resultado:** Al regresar al `main`, la variable ha sido modificada globalmente.
+
+---
+
+## 📊 ARREGLOS (ARRAYS)
+
+Un **array** es una colección de elementos con tres propiedades técnicas obligatorias:
+
+1.  **Finita:** Tamaño definido desde su creación.
+2.  **Homogénea:** Elementos del mismo tipo de dato.
+3.  **Contigua:** Ubicados en posiciones de memoria físicamente seguidas para un acceso rápido por índice.
+
+
+
+### 🗂️ Clasificación de Arrays
+
+| Tipo | Descripción | Acceso |
+| :--- | :--- | :--- |
+| **Unidimensional** | Una sola fila de elementos (Vector). | `array[i]` |
+| **Bidimensional** | Tabla organizada en filas y columnas. | `array[i][j]` |
+| **Multidimensional** | Estructuras en 3D o más (Cubos). | `array[i][j][k]` |
+
+#### 🖼️ Galería de Ejemplos en C
+
+* **Unidimensional:**
+    ![Vector](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/UNIDIMENCIONAL.png?raw=true)
+* **Bidimensional:**
+    ![Matriz](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/BIDIMENCIONAL.png?raw=true)
+* **Multidimensional:**
+    ![Cubo](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/MULTIDIMENSIONAL.png?raw=true)
+
+---
+
+## 💭 Reflexión Crítica
+Durante esta unidad, los temas de **tipos de array** y **modularidad** presentaron un desafío considerable debido a su complejidad lógica. Sin embargo, gracias a las tutorías y el refuerzo académico, logré consolidar estos conceptos fundamentales.
+
+---
+
+## 📂 Tareas Entregadas
+* ✅ [APE 1. Construcción de funciones y procedimientos](https://drive.google.com/file/d/1z92v5GO-P8uBfDW4pjwX6G5OhAi3Tyka/view?usp=drive_link)
+* ✅ [AA 1. Curso Fundamentos de Python 1](https://drive.google.com/file/d/1MyLiiQJ8KwwSUACr6XMBxE7UdEbG6XKS/view?usp=drive_link)
+
+---
 [⬅️ Regresar al índice principal](./index.md)
