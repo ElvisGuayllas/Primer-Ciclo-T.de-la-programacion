@@ -34,11 +34,13 @@ En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo e
 ![Paso por Valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png?raw=true)
 
 **🔍 ¿Cómo funciona?**
+
 🔢 **1.** `modificarValor(&numero);` -> `&numero` obtiene la dirección de memoria de la variable.
 
 🔢 **2.** `printf(...)` -> Muestra el valor actual. Como la función ya lo cambió, imprime **15**.
 
 🔢 **3.** `*n = 15;` -> `n` tiene la dirección; `*n` va a ese punto y cambia el valor allí guardado.
+
 🚀 **Efecto:** `numero` en `main()` pasa de `5 → 15`.
 
 ---
@@ -60,6 +62,7 @@ El emisor entrega la **dirección de memoria** (el puntero o referencia) donde r
 **🔍 ¿Cómo funciona?**
 
 🔢 **1.** `intercambiarvalores(&a, &b);` -> Pasa las direcciones de `a` y `b`.
+
 🔢 **2.** **Algoritmo de intercambio:**
     ```text
     1. aux = *x  (guarda valor de a)
