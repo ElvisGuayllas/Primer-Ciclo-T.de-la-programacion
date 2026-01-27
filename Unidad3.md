@@ -68,23 +68,23 @@ Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), f
 
  ## ARREGLOS (ARRAYS) ##
  - Un array (también conocido como arreglo o vector) es una de las estructuras de datos más fundamentales en programación. Técnicamente, es una colección finita, homogénea y contigua de elementos.
-- Finita: Debe tener un tamaño definido desde el momento de su creación (se debe reservar una cantidad específica de memoria).
-- Homogénea: Todos los elementos del array deben ser del mismo tipo de dato (por ejemplo, todos enteros o todos caracteres). No puedes mezclar tipos.
-- Contigua: Los elementos se almacenan en posiciones de memoria físicamente seguidas. Esto permite que el procesador acceda a ellos de forma muy rápida mediante un índice.
+1. Finita: Debe tener un tamaño definido desde el momento de su creación (se debe reservar una cantidad específica de memoria).
+2. Homogénea: Todos los elementos del array deben ser del mismo tipo de dato (por ejemplo, todos enteros o todos caracteres). No puedes mezclar tipos.
+3. Contigua: Los elementos se almacenan en posiciones de memoria físicamente seguidas. Esto permite que el procesador acceda a ellos de forma muy rápida mediante un índice.
 - **Tipos de Array**
 -**Array Unidimensional (Vector)**
-Colección lineal de elementos del mismo tipo, organizados en una sola fila en memoria contigua. Acceso secuencial mediante un único índice: nombre[índice].
+- Colección lineal de elementos del mismo tipo, organizados en una sola fila en memoria contigua. Acceso secuencial mediante un único índice: nombre[índice].
 - **Ejemplo en lenguaje C**
 - .
 ![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
 - ¿Como funciona y para que sirve?
 -**Array Bidimensional (Matriz)**
-Estructura rectangular de elementos organizados en filas y columnas. Representa una tabla 2D. Acceso: nombre[fila][columna]. Total de elementos: filas × columnas.
+- Estructura rectangular de elementos organizados en filas y columnas. Representa una tabla 2D. Acceso: nombre[fila][columna]. Total de elementos: filas × columnas.
 - **Ejemplo en lenguaje C**
 - . 
 ![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
 -**Array Multidimensional (n-dimensional)**
-Extensión a 3 o más dimensiones. Organiza datos en cubos o hiperestructuras. Acceso: nombre[i1][i2][i3]...[in]. Usado para datos volumétricos complejos.
+- Extensión a 3 o más dimensiones. Organiza datos en cubos o hiperestructuras. Acceso: nombre[i1][i2][i3]...[in]. Usado para datos volumétricos complejos.
 - **Ejemplo en lenguaje C**
 - . 
 ![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
