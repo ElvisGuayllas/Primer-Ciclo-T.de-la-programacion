@@ -12,13 +12,34 @@ Al segmentar un programa, los módulos deben intercambiar información. La forma
 - **Atributo técnico:** Maximiza el aislamiento y reduce el acoplamiento. Es la opción más segura para evitar "efectos secundarios" (cambios accidentales en otras partes del programa).
 - **Ejemplo en lenguaje C**
 - **Ejemplo:**  
-![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Teor-a-de-la-Programaci-n/blob/main/imagenes/imagen1.png)
-
+![Ejemplo de paso por valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png)
+¿Como funciona y para que sirve el codigo de la imagen?
+Línea 8: modificarValor(&numero);
+&numero = obtiene la dirección de memoria donde está guardado numero
+Pasa esa dirección (ej: 0x1000) a la función
+Resultado: La función "conoce dónde vive" numero
+Línea 10: printf("El valor de numero en main es: %d\n", numero);
+Imprime el valor actual de numero en main()
+Como la función ya lo cambió, ahora imprime 15
+Prueba: Sin línea 8, imprimiría 5
+Línea 14: *n = 15; (dentro de función)
+n contiene la dirección 0x1000
+*n = va a esa dirección y cambia el valor que hay ahí
+Efecto: numero en main() pasa de 5 → 15
+**¿Para qué sirve?**
+Pase por referencia permite:
+Modificar variables originales desde funciones
+Intercambiar valores (como tu ejemplo de intercambiarvalores)
+Pasar arreglos grandes sin copiarlos
+Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
 - **2. Paso por Referencia (Pass by Reference)**
   En lugar de duplicar el dato, el emisor entrega la dirección de memoria (el puntero o referencia) donde reside la información original.
 **Mecánica:** El módulo receptor no posee una copia; tiene acceso directo al "contenedor" original. Cualquier alteración realizada por el módulo impacta directamente en el dato global.
 **Contexto de uso**: Esencial para estructuras de datos masivas, objetos complejos o arreglos (arrays), donde duplicar la información penalizaría el rendimiento del sistema.
 **Atributo técnico:** Optimiza la eficiencia de memoria y velocidad. Sin embargo, aumenta el riesgo de efectos colaterales, por lo que requiere una gestión más cuidadosa de la lógica de programación.
+- **Ejemplo en lenguaje C**
+![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
+¿Como funciona y para que sirve el codigo de la imagen?
 
 
 
