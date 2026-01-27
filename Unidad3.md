@@ -34,6 +34,7 @@ En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo e
 ![Paso por Valor](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20VALOR.png?raw=true)
 
 **🔍 ¿Cómo funciona?**
+
 🔢 **1.** `modificarValor(&numero);` -> `&numero` obtiene la dirección de memoria de la variable.
 🔢 **2.** `printf(...)` -> Muestra el valor actual. Como la función ya lo cambió, imprime **15**.
 🔢 **3.** `*n = 15;` -> `n` tiene la dirección; `*n` va a ese punto y cambia el valor allí guardado.
@@ -56,6 +57,7 @@ El emisor entrega la **dirección de memoria** (el puntero o referencia) donde r
 ![Paso por Referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png?raw=true)
 
 **🔍 ¿Cómo funciona?**
+
 🔢 **1.** `intercambiarvalores(&a, &b);` -> Pasa las direcciones de `a` y `b`.
 🔢 **2.** **Algoritmo de intercambio:**
     ```text
@@ -82,6 +84,7 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 ---
 
 ### 1️⃣ **Array Unidimensional (Vector) 📏**
+
 📖 **Concepto:** Estructura lineal que almacena elementos en posiciones consecutivas. Se accede mediante un único índice (iniciando en 0).
 * **🎯 Usos:** Listas secuenciales, secuencias numéricas, colas o pilas.
 * **🚀 Atractivo:** Acceso directo $O(1)$ y recorrido eficiente.
@@ -95,6 +98,7 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 ---
 
 ### 2️⃣ **Array Bidimensional (Matriz) 📋**
+
 📖 **Concepto:** Estructura rectangular organizada en **filas y columnas**. Cada elemento se identifica por dos índices: `[fila][columna]`.
 * **🎯 Usos:** Tablas de datos, mapas 2D, matrices matemáticas o tableros de juegos.
 * **🚀 Atractivo:** Mantiene memoria contigua para un acceso rápido a datos tabulares.
@@ -108,6 +112,7 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 ---
 
 ### 3️⃣ **Array Multidimensional (n-dimensional) 🧊**
+
 📖 **Concepto:** Estructuras de 3 o más dimensiones (cubos o hiperestructuras). Requiere $n$ índices para la localización.
 * **🎯 Usos:** Gráficos 3D, tomografías médicas, simulaciones físicas y análisis de datos complejos.
 * **🚀 Atractivo:** Permite manejar volúmenes de datos con precisión volumétrica.
