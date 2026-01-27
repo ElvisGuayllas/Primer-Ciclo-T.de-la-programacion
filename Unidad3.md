@@ -37,7 +37,7 @@ Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
 **Contexto de uso**: Esencial para estructuras de datos masivas, objetos complejos o arreglos (arrays), donde duplicar la información penalizaría el rendimiento del sistema.
 **Atributo técnico:** Optimiza la eficiencia de memoria y velocidad. Sin embargo, aumenta el riesgo de efectos colaterales, por lo que requiere una gestión más cuidadosa de la lógica de programación.
 - **Ejemplo en lenguaje C**
-**.**
+- **.**
 ![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
 ¿Como funciona y para que sirve el codigo de la imagen?
 Línea 12: intercambiarvalores(&a, &b);
