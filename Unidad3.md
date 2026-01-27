@@ -27,7 +27,6 @@ n contiene la dirección 0x1000
 *n = va a esa dirección y cambia el valor que hay ahí
 Efecto: numero en main() pasa de 5 → 15
 **¿Para qué sirve?**
-Pase por referencia permite:
 Modificar variables originales desde funciones
 Intercambiar valores (como tu ejemplo de intercambiarvalores)
 Pasar arreglos grandes sin copiarlos
@@ -40,6 +39,34 @@ Eficiencia: solo pasas direcciones (4-8 bytes), no todo el dato
 - **Ejemplo en lenguaje C**
 ![Ejemplo de paso por referencia](https://github.com/ElvisGuayllas/Primer-Ciclo-T.de-la-programacion/blob/main/imagenes/PASE%20POR%20REFERENCIA.png)
 ¿Como funciona y para que sirve el codigo de la imagen?
+Línea 12: intercambiarvalores(&a, &b);
+Pasa direcciones de a (ej: 0x1000) y b (ej: 0x1004)
+Función recibe esas direcciones en x e y
+Líneas 20-22: Algoritmo de intercambio clásico
+text
+ANTES: a=3(0x1000)  b=5(0x1004)
+1. aux = *x     → aux=3
+2. *x = *y      → a=5  
+3. *y = aux     → b=3
+DESPUÉS: a=5       b=3 ✓
+Líneas 13-14: Imprimen resultado final en main(): a=5, b=3
+Flujo completo
+text
+Inicio: a=3, b=5
+→ Función recibe direcciones
+→ aux guarda 3, a recibe 5, b recibe 3  
+→ main() ve: a=5, b=3 ✓
+Salida:
+text
+El Valor intercambiado de x es: 5
+El Valor intercambiado de y es: 3
+EL Valor de es a: 5
+El Valor de es b: 3
+**¿Para qué sirve?**
+Intercambiar variables sin copiar valores grandes, ordenamiento (bubble sort), funciones reutilizables.
+
+ ## ARREGLOS (ARRAYS) ##
+
 
 
 
