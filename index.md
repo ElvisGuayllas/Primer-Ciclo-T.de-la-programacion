@@ -31,8 +31,8 @@ Primer ciclo
 ## Unidad 3 📝  
 [Contenidos de la unidad 3](./Unidad3.md)
 ---
-## Conclusiones 📊  
-[No aplica]
+## Conclusiones 📊 
+** La trayectoria a través de estas unidades no solo ha entregado habilidades técnicas en Lenguaje C y Python, sino que ha transformado la forma de resolver problemas. La superación de obstáculos técnicos mediante las tutorías y la práctica constante demuestra que la programación es una disciplina de resiliencia y análisis crítico. Lo que inició como una serie de bloques visuales ha culminado en la capacidad de diseñar estructuras de datos complejas y arquitecturas modulares sólidas.** 
 ---
 ## Referencias 📑  
 
