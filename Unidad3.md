@@ -19,8 +19,13 @@ La **modularidad** es una estrategia de diseño fundamentada en el principio de 
 
 Al segmentar un programa, los módulos deben intercambiar información. La forma en que los datos viajan define la **integridad** y el **rendimiento** del sistema.
 
+**Definición técnica**
+
+Cuando un parámetro se pasa por valor, la función recibe una copia independiente del dato.
+Cualquier modificación realizada dentro de la función no afecta al valor original fuera de ella.
+
 #### 1️⃣ **Paso por Valor (Pass by Value) 📥**
-En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo espacio de memoria asignado al módulo receptor.
+En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo espacio de memoria asignado al módulo receptor.Es un mecanismo de paso de parámetros en programación en el cual se envía una copia del valor de una variable a una función, y no la variable original.
 
 * **🧠 Lógica:** *"Te envío una fotocopia de mi documento; puedes rayarla, pero mi original sigue intacto."* 📄
 * **⚙️ Mecánica:** El módulo receptor opera sobre la copia. Cualquier modificación permanece aislada; la variable original en el módulo emisor queda intacta.
@@ -46,7 +51,11 @@ En este modelo, el sistema genera una **réplica exacta** del dato en un nuevo e
 ---
 
 #### 2️⃣ **Paso por Referencia (Pass by Reference) 📤**
-El emisor entrega la **dirección de memoria** (el puntero o referencia) donde reside la información original.
+El emisor entrega la **dirección de memoria** (el puntero o referencia) donde reside la información original. Es un mecanismo de paso de parámetros en programación en el cual la función recibe una referencia (dirección de memoria) de la variable original, no una copia de su valor.
+
+**Definición técnica**
+
+Cuando un parámetro se pasa por referencia, la función accede directamente a la variable original, por lo que cualquier modificación dentro de la función afecta al valor original fuera de ella.
 
 * **🧠 Lógica:** *"Te doy las llaves de mi casa; cualquier cambio que hagas adentro se quedará ahí permanentemente."* 🔑
 * **⚙️ Mecánica:** El módulo receptor tiene acceso directo al **contenedor original**. Cualquier alteración impacta directamente en el dato global.
@@ -89,7 +98,12 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 
 ### 1️⃣ **Array Unidimensional (Vector) 📏**
 
-📖 **Concepto:** Estructura lineal que almacena elementos en posiciones consecutivas. Se accede mediante un único índice (iniciando en 0).
+📖 **Concepto:** Un array unidimensional es una estructura de datos lineal que permite almacenar múltiples valores del mismo tipo bajo un solo nombre, organizados en una sola dimensión.
+
+**Definición técnica**
+
+Es una colección de elementos del mismo tipo de dato, accesibles mediante un único índice, que representa su posición dentro de una secuencia continua en memoria.
+
 * **🎯 Usos:** Listas secuenciales, secuencias numéricas, colas o pilas.
 * **🚀 Atractivo:** Acceso directo $O(1)$ y recorrido eficiente.
 
@@ -104,6 +118,11 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 ### 2️⃣ **Array Bidimensional (Matriz) 📋**
 
 📖 **Concepto:** Estructura rectangular organizada en **filas y columnas**. Cada elemento se identifica por dos índices: `[fila][columna]`.
+
+**Definición técnica**
+
+Es una colección de elementos del mismo tipo de dato, almacenados de manera contigua en memoria y accesibles mediante dos índices: el primero indica la fila,el segundo indica la columna.
+
 * **🎯 Usos:** Tablas de datos, mapas 2D, matrices matemáticas o tableros de juegos.
 * **🚀 Atractivo:** Mantiene memoria contigua para un acceso rápido a datos tabulares.
 
@@ -117,7 +136,12 @@ Un **array** es una colección de elementos con tres propiedades técnicas funda
 
 ### 3️⃣ **Array Multidimensional (n-dimensional) 🧊**
 
-📖 **Concepto:** Estructuras de 3 o más dimensiones (cubos o hiperestructuras). Requiere $n$ índices para la localización.
+📖 **Concepto:** Un array multidimensional es una estructura de datos que organiza información en dos o más dimensiones, permitiendo representar datos en forma de tablas, matrices o estructuras más complejas.
+
+**Definición técnica**
+
+Es un conjunto de elementos del mismo tipo de dato, organizados en múltiples índices, donde cada dimensión añade un nivel adicional de acceso.
+
 * **🎯 Usos:** Gráficos 3D, tomografías médicas, simulaciones físicas y análisis de datos complejos.
 * **🚀 Atractivo:** Permite manejar volúmenes de datos con precisión volumétrica.
 
